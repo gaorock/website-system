@@ -1,0 +1,161 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  background-color: #fff;
+  background: url('/assets/images/bg.jpg') center no-repeat;
+  background-size: cover;
+}
+
+.constrain {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+body {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+}
+
+header {
+  position: fixed;
+  width: 100vw;
+  height: 90px;
+  background-color: #fff;
+  box-shadow: 3px 0 10px rgba(0,0,0,0.08);
+
+  section {
+    height: 100%;
+    display: flex;
+    align-items: center;
+
+    .logo {
+      background: url('/assets/icons/logo.png') center no-repeat;
+      background-size: contain;
+      width: 150px;
+      height: 90px;
+      margin-right: 15px;
+    }
+
+    .text {
+      padding-left: 15px;
+      border-left: 1px solid #999;
+
+      h3 {
+        font-size: 1.4rem;
+        letter-spacing: 0.2rem;
+      }
+
+      p {
+        color: #999;
+      }
+    }
+  }
+}
+
+main {
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+
+
+  .container {
+    height: 100%;
+    display: flex;
+    align-items: center;
+
+    .icon {
+      flex: 1;
+      padding-bottom: 40%;
+      background: url('/assets/icons/people.png') center no-repeat;
+      background-size: contain;
+      transform: scale(0.8);
+    }
+
+    .login {
+      width: 360px;
+      height: 410px;
+      background-color: #fff;
+      padding: 30px 40px;
+
+
+      h3 {
+        padding: 10px 0;
+      }
+
+      .input-field {
+        height: 42px;
+        display: flex;
+        align-items: center;
+        margin: 22px 0;
+
+        input[name='code'] {
+          width: 50%;
+        }
+
+
+        .verifyCanvas, img {
+          width: 50%;
+          height: 100%;
+          margin-left: 10px;
+          object-fit: contain;
+        }
+      }
+
+      
+
+      input {
+        height: 100%;
+        width: 100%;
+        background-color: transparent;
+        border: none;
+        border: 1px solid #ccc;
+        padding: 0 20px;
+        border-radius: 3px;
+        outline: none;
+        overflow: hidden;
+        transition: all 200ms ease-in-out;
+        
+        &:focus {
+          border: 1px solid #2b5dff;
+        }
+
+        &::placeholder {
+          color: #999;
+        }
+      }
+
+      button {
+        width: 100%;
+        height:100%;
+        background-color: #2b5dff;
+        border: none;
+        color: #fff;
+        border-radius: 3px;
+        font-size: 0.9rem;
+        margin-top: 40px;
+      }
+
+    }
+
+    
+  }
+
+  footer {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    background-color: rgba(0,0,0,0.1);
+    text-align: center;
+    height: 50px;
+    width: 100vw;
+    line-height: 50px;
+    color: rgba(#fff, 0.4);
+    font-size: 0.8rem;
+  }
+}
+

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <link rel="stylesheet" href="styles/style.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, shrink-to-fit=no, viewport-fit=cover" />
+  <title>登陆</title>
+</head>
+<body>
+  <header>
+    <section class="constrain">
+      <div class="logo"></div>
+      <div class="text">
+        <h3>网站整站系统</h3>
+        <p>system management</p>
+      </div>
+    </section>
+  </header>
+  <main>
+    <div class="container constrain">
+      <div class="icon"></div>
+      <form class="login">
+        <h3>账户登录</h3>
+        <div class="input-field"><input placeholder="请输入您的用户名" autocomplete="off" name="username" /></div>
+        <div class="input-field"><input type="password" placeholder="请输入您的密码" autocomplete="off" name="password" /></div>
+        <div class="input-field">
+          <input name="code" placeholder="请输入验证码" />
+          <img src="/assets/images/code.png" />
+        </div>
+        <div class="input-field">
+          <button>登陆</button>
+        </div>
+      </form>
+    </div>
+    <footer>
+      技术支持：河南麦秸映像网络技术有限公司
+    </footer>
+  </main>
+</body> 
+<script>
+  const form = document.querySelector('form');
+
+  form.addEventListener('submit', e => {
+    e.preventDefault();
+    // content-type: "multipart/form-data"
+    const data = new FormData(form);
+    console.log({
+      username: data.get('username'),
+      password: data.get('password'),
+      code: data.get('code')
+    });
+
+  })
+
+</script>
+</html> 

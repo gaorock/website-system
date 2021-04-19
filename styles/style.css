@@ -1,0 +1,152 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  background-color: #fff;
+  background: url("/assets/images/bg.jpg") center no-repeat;
+  background-size: cover;
+}
+
+.constrain {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+body {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+}
+
+header {
+  position: fixed;
+  width: 100vw;
+  height: 90px;
+  background-color: #fff;
+  box-shadow: 3px 0 10px rgba(0, 0, 0, 0.08);
+}
+
+header section {
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+
+header section .logo {
+  background: url("/assets/icons/logo.png") center no-repeat;
+  background-size: contain;
+  width: 150px;
+  height: 90px;
+  margin-right: 15px;
+}
+
+header section .text {
+  padding-left: 15px;
+  border-left: 1px solid #999;
+}
+
+header section .text h3 {
+  font-size: 1.4rem;
+  letter-spacing: 0.2rem;
+}
+
+header section .text p {
+  color: #999;
+}
+
+main {
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+}
+
+main .container {
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+
+main .container .icon {
+  flex: 1;
+  padding-bottom: 40%;
+  background: url("/assets/icons/people.png") center no-repeat;
+  background-size: contain;
+  transform: scale(0.8);
+}
+
+main .container .login {
+  width: 360px;
+  height: 410px;
+  background-color: #fff;
+  padding: 30px 40px;
+}
+
+main .container .login h3 {
+  padding: 10px 0;
+}
+
+main .container .login .input-field {
+  height: 42px;
+  display: flex;
+  align-items: center;
+  margin: 22px 0;
+}
+
+main .container .login .input-field input[name='code'] {
+  width: 50%;
+}
+
+main .container .login .input-field .verifyCanvas, main .container .login .input-field img {
+  width: 50%;
+  height: 100%;
+  margin-left: 10px;
+  object-fit: contain;
+}
+
+main .container .login input {
+  height: 100%;
+  width: 100%;
+  background-color: transparent;
+  border: none;
+  border: 1px solid #ccc;
+  padding: 0 20px;
+  border-radius: 3px;
+  outline: none;
+  overflow: hidden;
+  transition: all 200ms ease-in-out;
+}
+
+main .container .login input:focus {
+  border: 1px solid #2b5dff;
+}
+
+main .container .login input::placeholder {
+  color: #999;
+}
+
+main .container .login button {
+  width: 100%;
+  height: 100%;
+  background-color: #2b5dff;
+  border: none;
+  color: #fff;
+  border-radius: 3px;
+  font-size: 0.9rem;
+  margin-top: 40px;
+}
+
+main footer {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.1);
+  text-align: center;
+  height: 50px;
+  width: 100vw;
+  line-height: 50px;
+  color: rgba(255, 255, 255, 0.4);
+  font-size: 0.8rem;
+}
